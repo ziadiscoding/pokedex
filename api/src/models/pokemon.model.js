@@ -39,6 +39,30 @@ const pokemonSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    soundPath: {
+        type: String,
+        default: null
+    },
+    height: {
+        type: Number,
+        min: 0,
+        validate: {
+            validator: function(value) {
+                return value >= 0;
+            },
+            message: 'Height must be a positive number'
+        }
+    },
+    weight: {
+        type: Number,
+        min: 0,
+        validate: {
+            validator: function(value) {
+                return value >= 0;
+            },
+            message: 'Weight must be a positive number'
+        }
+    },
     regions: [regionSchema]
 }, {
     timestamps: true,

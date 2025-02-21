@@ -117,12 +117,67 @@ src/
 ├── routes/         # Définition des routes
 ├── services/       # Logique métier
 └── tests/          # Tests unitaires et d'intégration
+
+public/
+├── src/
+│   ├── components/
+│   │   ├── auth/
+│   │   │   ├── LoginForm.jsx        
+│   │   │   └── RegisterForm.jsx     
+│   │   ├── pokemon/
+│   │   │   ├── PokemonCard.jsx      
+│   │   │   ├── PokemonList.jsx      
+│   │   │   └── PokemonSearch.jsx    
+│   │   └── trainer/
+│   │       ├── TrainerProfile.jsx   
+│   │       └── PokemonCollection.jsx 
+│   ├── services/
+│   │   ├── api.service.js          
+│   │   ├── auth.service.js  
+│   │   ├── pokemon.service.js  
+│   │   └── trainer.service.js  
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── index.html
+└── assets/
+    └── images/
+        ├── pokemon/    
+        ├── trainers/   
+        └── types/
 ```
 
 ## Rôles et Permissions
 
 - `USER` : Peut voir les Pokémon et gérer son profil de dresseur
 - `ADMIN` : Peut créer/modifier/supprimer des Pokémon
+
+## Front du projet
+
+### Structure de base
+
+- Une barre de navigation claire avec : Connexion/Inscription, Pokédex, Mon Profil
+- Un design épuré avec les couleurs classiques Pokémon (rouge, blanc, noir)
+
+### Pages essentielles
+
+- Page d'accueil simple avec la liste des Pokémon et une barre de recherche
+- Formulaires de connexion/inscription basiques
+- Page de profil dresseur montrant les statistiques principales
+- Vue détaillée d'un Pokémon avec ses informations essentielles
+
+### Fonctionnalités clés
+
+- Filtrage simple par type et recherche par nom
+- Boutons "Vu" et "Capturé" facilement accessibles
+- Affichage clair des Pokémon vus/capturés dans le profil
+- Pagination ou infinite scroll pour la liste des Pokémon
+
+### Interface utilisateur
+
+- Cartes Pokémon simples avec image, nom et types
+- Icônes distinctes pour indiquer le statut (vu/capturé)
+- Design responsive basique pour mobile et desktop
 
 ## License
 

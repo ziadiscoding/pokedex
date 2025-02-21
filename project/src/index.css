@@ -1,0 +1,371 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.poke-header {
+  padding: 1.8rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+}
+@media (max-width: 820px) {
+  .poke-header {
+    padding: 2rem !important;
+  }
+}
+.poke-header .poke-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.poke-header .poke-container .poke-logo {
+  height: 2.8rem;
+}
+.poke-header .poke-container .poke-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px !important;
+  height: 200px !important;
+}
+.poke-header .poke-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  z-index: 99999999999;
+}
+.poke-header .poke-nav .poke-link {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.poke-header .poke-nav .poke-button {
+  background-color: white;
+  border-radius: 5rem;
+  padding: 0.5rem 1.5rem;
+  margin-left: 1rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  mix-blend-mode: screen;
+}
+
+.container {
+  z-index: 999999;
+  position: relative;
+}
+
+.poke-dashboard {
+  background: rgb(94, 55, 186);
+  background: radial-gradient(circle, rgb(94, 55, 186) 0%, rgb(26, 12, 53) 100%);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.poke-hero {
+  min-height: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  padding: 2rem 1rem;
+}
+@media (min-width: 768px) {
+  .poke-hero {
+    min-height: 500px;
+    padding: 2rem;
+  }
+}
+.poke-hero .poke-relative {
+  position: absolute;
+  top: 5rem;
+  right: 0;
+}
+@media (min-width: 1024px) {
+  .poke-hero .poke-relative {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: auto;
+    margin-top: 0;
+  }
+}
+.poke-hero .poke-relative .poke-image {
+  padding: 20px 0;
+}
+@media (min-width: 768px) {
+  .poke-hero .poke-relative .poke-image {
+    height: 400px;
+  }
+}
+@media (min-width: 1024px) {
+  .poke-hero .poke-relative .poke-image {
+    height: 550px;
+    padding: 20px 0 50px 0;
+  }
+}
+.poke-hero .poke-container {
+  width: 100%;
+}
+.poke-hero .poke-container .poke-titles {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .poke-hero .poke-container .poke-titles {
+    padding: 2rem;
+    text-align: left;
+  }
+}
+@media (min-width: 1024px) {
+  .poke-hero .poke-container .poke-titles {
+    padding: 2rem 0 2rem 6rem;
+  }
+}
+.poke-hero .poke-container .poke-titles .poke-title {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 999;
+}
+@media (min-width: 768px) {
+  .poke-hero .poke-container .poke-titles .poke-title {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .poke-hero .poke-container .poke-titles .poke-title {
+    font-size: 6rem;
+  }
+}
+.poke-hero .poke-container .poke-titles .poke-title:nth-of-type(2) {
+  margin-top: -1rem;
+}
+@media (min-width: 768px) {
+  .poke-hero .poke-container .poke-titles .poke-title:nth-of-type(2) {
+    margin-top: -1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .poke-hero .poke-container .poke-titles .poke-title:nth-of-type(2) {
+    margin-top: -2.5rem;
+  }
+}
+.poke-hero .poke-container .poke-button {
+  background: linear-gradient(90deg, rgb(37, 21, 73) 0%, rgb(63, 45, 93) 100%);
+  border-radius: 5rem;
+  padding: 0.8rem 2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: solid 1px white;
+  color: white;
+  letter-spacing: 0.15rem;
+  transition: all 0.5s ease-in-out;
+  margin-left: 2rem;
+  display: block;
+  position: relative;
+  z-index: 999;
+}
+@media (min-width: 768px) {
+  .poke-hero .poke-container .poke-button {
+    margin-left: 2rem;
+    display: inline-block;
+  }
+}
+@media (min-width: 1024px) {
+  .poke-hero .poke-container .poke-button {
+    padding: 1rem 2.5rem;
+    margin-left: 6rem;
+  }
+}
+.poke-hero .poke-container .poke-button:hover {
+  padding: 0.8rem 2.5rem;
+}
+@media (min-width: 1024px) {
+  .poke-hero .poke-container .poke-button:hover {
+    padding: 1rem 3rem;
+  }
+}
+
+.poke-flex {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .poke-flex {
+    padding: 3rem 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0;
+  }
+}
+
+.poke-pokeball {
+  width: 100%;
+  height: 300px;
+  padding: 1rem;
+}
+@media (min-width: 1024px) {
+  .poke-pokeball {
+    width: calc(100vw - 947px);
+    height: 400px;
+    padding: 2rem 1rem 2rem 6rem;
+  }
+}
+
+.poke-featured {
+  width: 100%;
+  padding: 0 1rem;
+}
+@media (min-width: 1024px) {
+  .poke-featured {
+    width: 947px;
+    padding: 0;
+  }
+}
+.poke-featured .poke-title {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .poke-featured .poke-title {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+}
+.poke-featured .mypokemons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .poke-featured .mypokemons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .poke-featured .mypokemons {
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+}
+.poke-featured .single-pokemon {
+  background-color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .poke-featured .single-pokemon {
+    width: auto;
+    padding: 1rem 2rem;
+  }
+}
+.poke-featured .single-pokemon .poke-image {
+  height: 4rem;
+  width: 4rem;
+  min-width: 4rem;
+  background-color: rgb(221, 216, 216);
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .poke-featured .single-pokemon .poke-image {
+    height: 5rem;
+    width: 5rem;
+    min-width: 5rem;
+  }
+}
+.poke-featured .single-pokemon .poke-image img {
+  height: 5rem;
+  max-width: none;
+}
+@media (min-width: 768px) {
+  .poke-featured .single-pokemon .poke-image img {
+    height: 7rem;
+  }
+}
+.poke-featured .single-pokemon .poke-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.poke-featured .single-pokemon .poke-details .poke-name {
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .poke-featured .single-pokemon .poke-details .poke-name {
+    font-size: 1.1rem;
+  }
+}
+.poke-featured .single-pokemon .poke-details .poke-type {
+  margin-top: 0.5rem;
+  color: white;
+  background-color: #FFCC2A;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.login-section .login-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-section .login-description .login-logo {
+  margin-bottom: 3rem;
+  height: 4rem;
+}
+
+.register-section .register-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.register-section .register-description .register-logo {
+  margin-bottom: 3rem;
+  height: 4rem;
+}
+
+.indexscreen {
+  z-index: 999999;
+}/*# sourceMappingURL=index.css.map */

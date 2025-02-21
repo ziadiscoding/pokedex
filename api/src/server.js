@@ -40,6 +40,7 @@ const { ROLES } = require('./models/user.model');
 apiRouter.post('/auth/register', authController.register);
 apiRouter.post('/auth/login', authController.login);
 apiRouter.get('/auth/me', authenticateToken, authController.checkUser);
+apiRouter.put('/auth/me', authenticateToken, authController.updateCurrentUser);
 
 // Routes des types de Pokémon
 apiRouter.get('/pkmn/types', pokemonTypeController.getTypes);

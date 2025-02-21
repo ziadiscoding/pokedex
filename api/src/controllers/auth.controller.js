@@ -67,8 +67,37 @@ const checkUser = async (req, res) => {
     });
 };
 
+const updateCurrentUser = async (req, res) => {
+    try {
+        const { username, email, password } = req.body;
+        
+        // Ne mettre à jour que les champs fournis
+        const updateData = {};
+        if (username) updateData.username = username;
+        if (email) updateData.email = email;
+        if (password) updateData.password = password;
+
+        const user = await authService.updateUser(req.user._id, updateData);
+
+        res.json({
+            message: 'User updated successfully',
+            data: {
+                user: {
+                    id: user._id,
+                    username: user.username,
+                    email: user.email,
+                    role: user.role
+                }
+            }
+        });
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+};
+
 module.exports = {
     register,
     login,
-    checkUser
+    checkUser,
+    updateCurrentUser
 };

@@ -7,6 +7,8 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "init-admin": "node src/scripts/init-admin.js",
+    "reset-db": "node src/scripts/reset-db.js",
+    "reimport-pokemon": "node src/scripts/import-from-api.js",
     "test": "cross-env NODE_ENV=test jest --detectOpenHandles",
     "test:watch": "cross-env NODE_ENV=test jest --watch",
     "test:coverage": "cross-env NODE_ENV=test jest --coverage"
