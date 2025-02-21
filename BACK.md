@@ -41,6 +41,11 @@ npm run init-admin
 npm run dev
 ```
 
+5. Peupler la bdd
+```bash
+npm run reimport-pokemon
+```
+
 ## Scripts disponibles
 
 - `npm start` : Lance en mode production
