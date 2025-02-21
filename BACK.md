@@ -17,6 +17,16 @@ Une API RESTful pour gérer un Pokédex, permettant de manipuler des Pokémon et
 - MongoDB
 - npm ou yarn
 
+## Valeurs par défaut
+
+L'application utilise les configurations par défaut suivantes :
+- Port du serveur : 3000
+- URL MongoDB : mongodb://localhost:27017/pokedex
+- Compte admin par défaut :
+  - Username : admin
+  - Email : admin@pokemon.com
+  - Password : admin123
+
 ## Installation
 
 1. Cloner le repository
@@ -44,6 +54,11 @@ npm run dev
 5. Peupler la bdd
 ```bash
 npm run reimport-pokemon
+```
+
+6. Créer un profil dresseur
+```bash
+http://localhost:5173/trainer/profile
 ```
 
 ## Scripts disponibles
@@ -93,17 +108,6 @@ npm run test:coverage
 # Mode watch pour le développement
 npm run test:watch
 ```
-
-## Valeurs par défaut
-
-L'application utilise les configurations par défaut suivantes :
-- Port du serveur : 3000
-- URL MongoDB : mongodb://localhost:27017/pokedex
-- Compte admin par défaut :
-  - Username : admin
-  - Email : admin@pokemon.com
-  - Password : admin123
-
 ## Licence
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
